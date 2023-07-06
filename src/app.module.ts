@@ -19,7 +19,6 @@ import { ContentsModule } from './modules/contents/contents.module';
       password: process.env.DB_PASSWORD,
       database: process.env.DB_DB,
       entities: ['dist/**/*.entity{.ts,.js}'],
-      // logging: true,
     }),
     GraphQLModule.forRoot({
       debug: false,
