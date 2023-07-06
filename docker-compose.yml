@@ -20,8 +20,10 @@ services:
   postgres:
     container_name: db_atividade-final
     image: 'postgres:9.6.1'
+    networks:
+      - docker-network
     ports:
-      - '5432:5432'
+      - 5432:5432
     environment:
       POSTGRES_USER: ${DB_PASSWORD}
       POSTGRES_PASSWORD: ${DB_USERNAME}
